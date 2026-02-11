@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:qe-api": "node qe-local-api/server.js",
-    "testone": "npx playwright test tests/login.spec.ts"
+    "testone": "npx playwright test tests/login.spec.ts --workers=1"
   },
   "keywords": [],
   "author": "",
