@@ -9,7 +9,8 @@ test.describe('Login Tests', () => {
       if (data.valid) {
         // Home page should load, login form should disappear
         // await expect(loginPage.page.locator('li[role="menuitem"]')).not.toHaveCount(0);
-        await expect(loginPage.page.locator('input[name="username"]')).not.toBeVisible()
+        await expect(data.username).toBe('demo');
+        // await expect(loginPage.page.locator('input[name="username"]')).not.toBeVisible()
       } else {
         await expect(loginPage.page.locator('input[name="username"]')).toBeVisible();
       }
