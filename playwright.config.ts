@@ -20,13 +20,14 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
+
   workers: 1,
   timeout:100000,
   
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html',{ open: 'always' }],
-    ['./src/AIAnalyzerReporter.ts']
+    // ['./src/AIAnalyzerReporter.ts']
 
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -36,7 +37,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
-    
+    headless: true,
     
   },
 

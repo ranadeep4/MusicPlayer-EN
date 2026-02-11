@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:qe-api": "node qe-local-api/server.js"
+    "start:qe-api": "node qe-local-api/server.js",
+    "testone": "npx playwright test tests/login.spec.ts"
   },
   "keywords": [],
   "author": "",
