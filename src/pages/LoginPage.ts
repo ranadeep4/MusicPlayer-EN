@@ -17,6 +17,7 @@ export class LoginPage {
     await this._page.fill('input[name="username"]', username);
     await this._page.fill('input[name="password"]', password);
     await this._page.click('button:has-text("Sign in")');
+    this._page.waitForTimeout(10000)
   }
 
   async getErrorMessage() {
